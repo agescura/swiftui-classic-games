@@ -25,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		956A75BA297F43CD007014BD /* swiftui-classic-games */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swiftui-classic-games"; path = ..; sourceTree = "<group>"; };
 		95740FB7297F18F300CA7626 /* ClassicGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95740FBA297F18F300CA7626 /* ClassicGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGamesApp.swift; sourceTree = "<group>"; };
 		95740FBC297F18F300CA7626 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		95740FAE297F18F300CA7626 = {
 			isa = PBXGroup;
 			children = (
+				956A75BA297F43CD007014BD /* swiftui-classic-games */,
 				95740FB9297F18F300CA7626 /* ClassicGames */,
 				95740FCA297F18F500CA7626 /* ClassicGamesTests */,
 				95740FB8297F18F300CA7626 /* Products */,
