@@ -3,6 +3,6 @@ import XCTest
 
 final class swiftui_classic_gamesTests: XCTestCase {
     func testExample() throws {
-        XCTAssertEqual(swiftui_classic_games().text, "Hello, World")
+        XCTAssertEqual(swiftui_classic_games().text, "Hello, World!")
     }
 }

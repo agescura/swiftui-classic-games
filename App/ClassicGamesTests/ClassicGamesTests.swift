@@ -3,6 +3,6 @@ import XCTest
 
 final class ClassicGamesTests: XCTestCase {
   func testExample() throws {
-    XCTAssert(true)
+    XCTAssert(false)
   }
 }
