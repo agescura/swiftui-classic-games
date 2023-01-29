@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		95740FBB297F18F300CA7626 /* ClassicGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95740FBA297F18F300CA7626 /* ClassicGamesApp.swift */; };
-		95740FBD297F18F300CA7626 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95740FBC297F18F300CA7626 /* ContentView.swift */; };
 		95740FBF297F18F500CA7626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95740FBE297F18F500CA7626 /* Assets.xcassets */; };
 		95740FC2297F18F500CA7626 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95740FC1297F18F500CA7626 /* Preview Assets.xcassets */; };
 		95740FCC297F18F500CA7626 /* ClassicGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95740FCB297F18F500CA7626 /* ClassicGamesTests.swift */; };
+		95B01FD42986E6F3000FA621 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 95B01FD32986E6F3000FA621 /* AppFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 		956A75BA297F43CD007014BD /* swiftui-classic-games */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swiftui-classic-games"; path = ..; sourceTree = "<group>"; };
 		95740FB7297F18F300CA7626 /* ClassicGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95740FBA297F18F300CA7626 /* ClassicGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGamesApp.swift; sourceTree = "<group>"; };
-		95740FBC297F18F300CA7626 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95740FBE297F18F500CA7626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95740FC1297F18F500CA7626 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95740FC7297F18F500CA7626 /* ClassicGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassicGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B01FD42986E6F3000FA621 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +60,7 @@
 				95740FB9297F18F300CA7626 /* ClassicGames */,
 				95740FCA297F18F500CA7626 /* ClassicGamesTests */,
 				95740FB8297F18F300CA7626 /* Products */,
+				95B01FD02986D9A7000FA621 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				95740FBA297F18F300CA7626 /* ClassicGamesApp.swift */,
-				95740FBC297F18F300CA7626 /* ContentView.swift */,
 				95740FBE297F18F500CA7626 /* Assets.xcassets */,
 				95740FC0297F18F500CA7626 /* Preview Content */,
 			);
@@ -99,6 +99,13 @@
 			path = ClassicGamesTests;
 			sourceTree = "<group>";
 		};
+		95B01FD02986D9A7000FA621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +122,9 @@
 			dependencies = (
 			);
 			name = ClassicGames;
+			packageProductDependencies = (
+				95B01FD32986E6F3000FA621 /* AppFeature */,
+			);
 			productName = ClassicGames;
 			productReference = 95740FB7297F18F300CA7626 /* ClassicGames.app */;
 			productType = "com.apple.product-type.application";
@@ -199,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95740FBD297F18F300CA7626 /* ContentView.swift in Sources */,
 				95740FBB297F18F300CA7626 /* ClassicGamesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +475,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95B01FD32986E6F3000FA621 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95740FAF297F18F300CA7626 /* Project object */;
 }
