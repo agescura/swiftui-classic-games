@@ -20,7 +20,15 @@ jobs:
       run: |
         cd App
         xcodebuild test -project ClassicGames.xcodeproj -scheme ClassicGames -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2'
-    - name: Swift Package Manager Test
+    - name: AppFeatureTests
       run: |
         cd App
-        xcodebuild test -project ClassicGames.xcodeproj -scheme swiftui-classic-gamesTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2'
+        xcodebuild test -project ClassicGames.xcodeproj -scheme AppFeatureTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2'
+    - name: TicTacToeFeatureTests
+      run: |
+        cd App
+        xcodebuild test -project ClassicGames.xcodeproj -scheme TicTacToeFeatureTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2'
+    - name: TicTacToeRowFeatureTests
+      run: |
+        cd App
+        xcodebuild test -project ClassicGames.xcodeproj -scheme TicTacToeRowFeatureTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=16.2'
