@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Foundation
+import TicTacToeClient
 import TicTacToeFeature
 
 public struct App: ReducerProtocol {
@@ -23,6 +24,8 @@ public struct App: ReducerProtocol {
     case setTicTacToeNavigation(isActive: Bool)
   }
   
+  @Dependency(\.ticTacToeClient.board) private var board
+  
   public var body: some ReducerProtocolOf<Self> {
     Reduce(self.core)
       .ifLet(\.ticTacToe, action: /Action.ticTacToe, then: TicTacToe.init)
@@ -36,7 +39,14 @@ public struct App: ReducerProtocol {
     case .ticTacToe:
       return .none
     case let .setTicTacToeNavigation(isActive: isActive):
-      state.ticTacToe = isActive ? .init() : nil
+      state.ticTacToe = isActive
+      ? .init(
+        rows: .init(
+          uniqueElements: self.board()
+            .map { .init(boundaries: $0) }
+        )
+      )
+      : nil
       return .none
     }
   }

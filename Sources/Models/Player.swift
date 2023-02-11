@@ -1,6 +1,6 @@
 import Foundation
 
-public enum Player {
+public enum Player: String, CaseIterable {
   case o
   case x
 }

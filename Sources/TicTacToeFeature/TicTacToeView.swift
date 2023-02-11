@@ -4,7 +4,7 @@ import SwiftUI
 import TicTacToeRowFeature
 
 public struct TicTacToeView: View {
-  let store: StoreOf<TicTacToe>
+  private let store: StoreOf<TicTacToe>
   
   public init(
     store: StoreOf<TicTacToe>
@@ -74,10 +74,22 @@ struct TicTacToeView_Preview: PreviewProvider {
     TicTacToeView(
       store: .init(
         initialState: .init(
-//          rows: []
+          rows: .board
         ),
         reducer: TicTacToe()
       )
     )
   }
 }
+
+extension IdentifiedArray where Element == TicTacToeRow.State, ID == Boundaries {
+  public static var board: Self {
+    IdentifiedArrayOf<TicTacToeRow.State>(
+      uniqueElements: Boundaries
+        .allCases
+        .map { .init(boundaries: $0) }
+    )
+  }
+}
+
+import Models

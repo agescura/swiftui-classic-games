@@ -28,6 +28,7 @@ public struct AppView: View {
               Image(systemName: "chevron.right")
                 .foregroundColor(.gray)
             }
+            .contentShape(Rectangle())
           }
           .buttonStyle(.plain)
           Text("Buscaminas")

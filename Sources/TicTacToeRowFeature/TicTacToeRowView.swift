@@ -4,7 +4,7 @@ import Models
 import SwiftUI
 
 public struct TicTacToeRowView: View {
-  let store: StoreOf<TicTacToeRow>
+  private let store: StoreOf<TicTacToeRow>
   
   public init(
     store: StoreOf<TicTacToeRow>
@@ -113,7 +113,7 @@ extension Boundaries {
                 CGPoint(x: size.width, y: size.height),
                 CGPoint(x: 0, y: size.height)
             ]
-        case .all:
+        case .center:
             return [
                 CGPoint(x: 0, y: 0),
                 CGPoint(x: size.width, y: 0),

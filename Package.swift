@@ -30,6 +30,10 @@ let package = Package(
       targets: ["Models"]
     ),
     .library(
+      name: "TicTacToeClient",
+      targets: ["TicTacToeClient"]
+    ),
+    .library(
       name: "TicTacToeFeature",
       targets: ["TicTacToeFeature"]
     ),
@@ -47,6 +51,7 @@ let package = Package(
     .target(
       name: "AppFeature",
       dependencies: [
+        "TicTacToeClient",
         "TicTacToeFeature",
         composableArchitecture
       ]
@@ -56,11 +61,20 @@ let package = Package(
       dependencies: []
     ),
     .target(
+      name: "TicTacToeClient",
+      dependencies: [
+        "Models",
+        dependencies
+      ]
+    ),
+    .target(
       name: "TicTacToeFeature",
       dependencies: [
         "Models",
+        "TicTacToeClient",
         "TicTacToeRowFeature",
-        composableArchitecture
+        composableArchitecture,
+        dependencies
       ]
     ),
     .target(
